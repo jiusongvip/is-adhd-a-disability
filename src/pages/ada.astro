@@ -3,14 +3,17 @@
  import { siteConfig } from "../data/site";
   const pageSchema = { "@context": "https://schema.org", "@type": "Article", "headline": "Is ADHD a Disability Under the ADA?", "description": "Understand how the ADA protects individuals with ADHD. Covers legal definitions, accommodations, employer obligations, and key court cases.", "datePublished": "2026-07-22", "publisher": siteConfig.publisher, "mainEntityOfPage": { "@type": "WebPage", "@id": "https://isadhdadisability.com/ada" } };
  ---
-  <BaseLayout title="Is ADHD a Disability Under the ADA?" description="Understand how the ADA protects individuals with ADHD. Covers legal definitions, accommodations, employer obligations, and key court cases that shaped the law." canonicalURL="https://isadhdadisability.com/ada" schema={pageSchema}>
+  <BaseLayout title="Is ADHD a Disability Under the ADA?" description="Understand how the ADA protects individuals with ADHD. Covers legal definitions, accommodations, employer obligations, and key court cases that shaped the law." canonicalURL="https://isadhdadisability.com/ada" ogImage="/images/ada-law.webp" schema={pageSchema}>
    <section class="hero-surface border-b border-emerald-100">
      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12 md:pt-24 md:pb-18">
        <nav class="text-sm text-zinc-400 mb-6"><a href="/" class="hover:text-accent">Home</a> / ADA and ADHD</nav>
-       <div class="max-w-3xl">
+       <div class="flex flex-col md:flex-row gap-8 items-start">
+       <div class="max-w-3xl flex-1">
          <p class="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-dark mb-5 bg-accent-light px-3 py-1 rounded-full"><span class="w-1.5 h-1.5 rounded-full bg-accent"></span>Americans with Disabilities Act</p>
          <h1 class="text-3xl md:text-5xl font-extrabold text-zinc-900 leading-none tracking-tight">Is ADHD a Disability Under the ADA?</h1>
          <p class="mt-6 text-lg text-zinc-600 leading-relaxed max-w-2xl">The short answer is <strong class="text-accent-dark">yes</strong>. ADHD can qualify as a disability under the ADA when it substantially limits one or more major life activities. Here is how the law defines it and what protections you have.</p>
+       </div>
+       <div class="hidden md:block w-80 flex-shrink-0"><img src="/images/ada-law.webp" alt="Gavel and scales of justice representing ADA legal protections" class="rounded-xl shadow-lg w-full" width="320" height="213" loading="eager" /></div>
        </div>
      </div>
    </section>

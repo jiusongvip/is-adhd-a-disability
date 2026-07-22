@@ -8,7 +8,7 @@ export const siteConfig = {
     "url": "https://isadhdadisability.com",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://isadhdadisability.com/og-image.png"
+      "url": "https://isadhdadisability.com/images/og-image.png"
     }
   }
 };
