@@ -1,0 +1,322 @@
+{
+  "summary": {
+    "health_score": 72,
+    "business_type": "Information/Education - ADHD Disability Legal Guide",
+    "domain": "isadhdadisability.com",
+    "status": "Domain not resolving - site not live",
+    "pages_audited": 14,
+    "top_findings": [
+      "Sitemap conflict: public/sitemap.xml overrides @astrojs/sitemap and self-references",
+      "FAQ page renders content twice (duplicate content issue)",
+      "Zero images across entire site - no OG images, no blog images, no infographics",
+      "No E-E-A-T signals: missing author, reviewer, about page, contact page",
+      "No authoritative outbound links to .gov sources for legal content",
+      "Domain DNS not configured - site unreachable",
+      "Cache-Control meta tags disable all browser caching"
+    ],
+    "quick_wins": [
+      "Delete public/sitemap.xml to let Astro sitemap plugin manage it",
+      "Remove duplicate FAQ rendering in faq.astro (line 52-54)",
+      "Remove Cache-Control/Pragma/Expires meta tags from BaseLayout",
+      "Add default OG image to BaseLayout",
+      "Fix title logic in BaseLayout to always include brand suffix"
+    ]
+  },
+  "categories": [
+    {
+      "name": "Technical SEO",
+      "score": 68,
+      "weight": 22,
+      "what_works": [
+        "Astro static generation - fully crawlable HTML",
+        "Consistent trailing slash handling (never)",
+        "301 redirects for trailing slash variants",
+        "robots.txt allows all crawlers",
+        "Skip-to-content accessibility link",
+        "html lang=en set"
+      ],
+      "findings": [
+        {
+          "title": "Sitemap conflict - public/sitemap.xml self-references",
+          "severity": "Critical",
+          "description": "public/sitemap.xml is a hand-coded sitemap index pointing to sitemap-index.xml. The @astrojs/sitemap plugin generates sitemap-index.xml automatically. The manual file creates a circular reference.",
+          "recommendation": "Delete public/sitemap.xml entirely. Let @astrojs/sitemap manage all sitemap generation."
+        },
+        {
+          "title": "Domain not resolving",
+          "severity": "Critical",
+          "description": "DNS lookup for isadhdadisability.com fails. Site is completely unreachable.",
+          "recommendation": "Configure DNS records and deploy to a hosting platform (Cloudflare Pages, Vercel, or Netlify recommended)."
+        },
+        {
+          "title": "No custom 404 page",
+          "severity": "High",
+          "description": "No 404.astro found in src/pages. Static hosting will show platform default 404.",
+          "recommendation": "Create src/pages/404.astro with site navigation and search."
+        },
+        {
+          "title": "Missing critical OG meta tags",
+          "severity": "Medium",
+          "description": "og:url, og:site_name, og:locale all missing from BaseLayout.",
+          "recommendation": "Add og:url, og:site_name, and og:locale to BaseLayout head."
+        },
+        {
+          "title": "No security headers",
+          "severity": "Medium",
+          "description": "No CSP, X-Frame-Options, X-Content-Type-Options, Strict-Transport-Security headers configured.",
+          "recommendation": "Configure security headers at the hosting/CDN layer."
+        },
+        {
+          "title": "Cache-Control meta disables caching",
+          "severity": "Medium",
+          "description": "Cache-Control: no-cache, no-store meta tag hurts Core Web Vitals for returning visitors.",
+          "recommendation": "Remove cache meta tags. Use CDN-level cache headers instead."
+        }
+      ]
+    },
+    {
+      "name": "Content Quality",
+      "score": 78,
+      "weight": 23,
+      "what_works": [
+        "14 pages covering ADA, school, workplace, SSDI, Section 504, international comparison, rights checklist, accommodations guide, 50+ FAQ, 3 blog articles",
+        "Clear H1-H2-H3 hierarchy on all pages",
+        "Actionable step-by-step guides (504 evaluation, SSDI application)",
+        "Legal disclaimers on every page",
+        "No thin content pages - all have substantive content"
+      ],
+      "findings": [
+        {
+          "title": "E-E-A-T signals completely absent",
+          "severity": "High",
+          "description": "No author attribution, no reviewer credentials, no About page, no Contact page. Legal/medical content requires strong E-E-A-T signals for Google ranking.",
+          "recommendation": "Add author/reviewer bylines, create About and Contact pages, add medical/legal reviewer credentials."
+        },
+        {
+          "title": "No authoritative outbound links",
+          "severity": "High",
+          "description": "Legal content does not link to any .gov sources (ada.gov, eeoc.gov, ssa.gov). This weakens credibility and E-E-A-T.",
+          "recommendation": "Add links to primary legal sources: ADA text, EEOC guidance, SSA listings, Section 504 regulations."
+        },
+        {
+          "title": "Some pages content-thin",
+          "severity": "Medium",
+          "description": "/workplace (~400 words), /rights (~350 words), /by-country entries are brief.",
+          "recommendation": "Expand to 800+ words with more case studies, examples, and actionable advice."
+        },
+        {
+          "title": "Only 3 blog articles",
+          "severity": "Medium",
+          "description": "Limited blog content for an information site. Regular publishing signals freshness to Google.",
+          "recommendation": "Publish 2-4 new articles per month targeting long-tail keywords."
+        }
+      ]
+    },
+    {
+      "name": "On-Page SEO",
+      "score": 80,
+      "weight": 20,
+      "what_works": [
+        "Single H1 on every page",
+        "Well-optimized title tags with target keywords",
+        "Meta descriptions present on all pages",
+        "Canonical URLs set on every page",
+        "Cross-linking between pages (hub-spoke pattern)",
+        "Breadcrumb navigation on all sub-pages",
+        "Consistent header/footer navigation"
+      ],
+      "findings": [
+        {
+          "title": "FAQ page renders content twice",
+          "severity": "High",
+          "description": "faq.astro lines 52-54 render all FAQ questions twice in the DOM. Google may view this as duplicate/spam content.",
+          "recommendation": "Remove one of the two faqCategories.map() blocks in faq.astro."
+        },
+        {
+          "title": "Title logic prevents brand suffix",
+          "severity": "Medium",
+          "description": "BaseLayout pageTitle logic skips brand suffix when title contains 'ADHD' - which is almost every page. Multiple pages lack brand identification in title.",
+          "recommendation": "Simplify to: `${title} | Is ADHD a Disability` for all pages."
+        },
+        {
+          "title": "No table of contents on long articles",
+          "severity": "Medium",
+          "description": "Long pages (ada, school, ssdi) have multiple H2 sections but no TOC. TOC helps Google generate featured snippets.",
+          "recommendation": "Add anchor-linked TOC component for pages with 4+ H2 sections."
+        },
+        {
+          "title": "Breadcrumbs lack structured data",
+          "severity": "Low",
+          "description": "Breadcrumb navigation is plain HTML without BreadcrumbList schema.",
+          "recommendation": "Add BreadcrumbList JSON-LD schema to match breadcrumb HTML."
+        }
+      ]
+    },
+    {
+      "name": "Schema / Structured Data",
+      "score": 72,
+      "weight": 10,
+      "what_works": [
+        "FAQPage schema on homepage and /faq",
+        "Article schema on blog posts and key pages (ada, ssdi, school)",
+        "Blog + BlogPosting schema on /blog index"
+      ],
+      "findings": [
+        {
+          "title": "5 pages missing all schema",
+          "severity": "High",
+          "description": "/workplace, /rights, /accommodations, /by-country, /section-504 have zero structured data.",
+          "recommendation": "Add Article or WebPage schema to all remaining pages."
+        },
+        {
+          "title": "Article schema incomplete",
+          "severity": "Medium",
+          "description": "Article schema missing author, datePublished, dateModified, publisher, image fields.",
+          "recommendation": "Complete Article schema with all recommended fields for rich results eligibility."
+        },
+        {
+          "title": "No WebSite schema on homepage",
+          "severity": "Medium",
+          "description": "Missing WebSite + SearchAction schema prevents Google sitelinks searchbox.",
+          "recommendation": "Add WebSite schema with SearchAction to homepage."
+        },
+        {
+          "title": "No BreadcrumbList schema",
+          "severity": "Medium",
+          "description": "All pages have breadcrumb HTML but no corresponding BreadcrumbList JSON-LD.",
+          "recommendation": "Add BreadcrumbList schema to BaseLayout."
+        }
+      ]
+    },
+    {
+      "name": "Performance (CWV)",
+      "score": 70,
+      "weight": 10,
+      "what_works": [
+        "Astro SSG - minimal JS, fast HTML",
+        "Tailwind CSS 4.x auto tree-shaking",
+        "Inter font loaded with display=swap",
+        "No heavy JS frameworks",
+        "Minimal JavaScript (only menu toggle and URL cleanup)"
+      ],
+      "findings": [
+        {
+          "title": "Google Fonts render-blocking",
+          "severity": "High",
+          "description": "5 font weights (400-800) loaded from Google Fonts CDN. External font request is LCP bottleneck.",
+          "recommendation": "Use @fontsource/inter for local font hosting, or reduce to 3 weights. Use font-display: optional."
+        },
+        {
+          "title": "Cache-Control disables browser caching",
+          "severity": "Medium",
+          "description": "Meta tags set no-cache, no-store. Returning visitors re-download all resources.",
+          "recommendation": "Remove cache meta tags. Configure proper cache headers at CDN level."
+        }
+      ]
+    },
+    {
+      "name": "AI Search Readiness",
+      "score": 55,
+      "weight": 10,
+      "what_works": [
+        "FAQ content is well-structured with clear Q&A pairs",
+        "Content covers a focused topic comprehensively",
+        "Clear heading hierarchy aids AI parsing"
+      ],
+      "findings": [
+        {
+          "title": "No llms.txt file",
+          "severity": "High",
+          "description": "Missing /llms.txt prevents AI crawlers (ChatGPT Browse, Perplexity) from quickly understanding site structure.",
+          "recommendation": "Create /public/llms.txt with site overview, page descriptions, and content map."
+        },
+        {
+          "title": "No authoritative outbound links",
+          "severity": "High",
+          "description": "AI search engines prefer citing content backed by authoritative sources. No .gov links present.",
+          "recommendation": "Link to ADA, EEOC, SSA, Section 504 primary sources."
+        },
+        {
+          "title": "Missing Key Takeaways blocks",
+          "severity": "Medium",
+          "description": "Pages lack TL;DR / Key Takeaways summaries that AI engines prefer for citation snippets.",
+          "recommendation": "Add a concise bullet-point summary at the top of each content page."
+        },
+        {
+          "title": "No RSS feed",
+          "severity": "Low",
+          "description": "No RSS/Atom feed for AI crawlers to discover new content automatically.",
+          "recommendation": "Add astro-rss or similar integration for feed generation."
+        }
+      ]
+    },
+    {
+      "name": "Images",
+      "score": 50,
+      "weight": 5,
+      "what_works": [],
+      "findings": [
+        {
+          "title": "Zero images across entire site",
+          "severity": "Critical",
+          "description": "No img tags on any page. No OG images, no blog featured images, no infographics, no author photos. ogImage prop defaults to empty string.",
+          "recommendation": "1) Add default OG image (1200x630) to BaseLayout. 2) Add featured images to blog posts. 3) Add relevant illustrations to core pages. 4) Add author photos if applicable."
+        }
+      ]
+    }
+  ],
+  "action_plan": {
+    "phases": [
+      {
+        "name": "Phase 1: Critical Fixes",
+        "timeframe": "Week 1",
+        "items": [
+          "Delete public/sitemap.xml",
+          "Fix FAQ duplicate rendering",
+          "Remove Cache-Control meta tags",
+          "Configure DNS and deploy site",
+          "Add default OG image",
+          "Create custom 404 page"
+        ]
+      },
+      {
+        "name": "Phase 2: Content & E-E-A-T Enhancement",
+        "timeframe": "Weeks 2-3",
+        "items": [
+          "Add author/reviewer attribution to all pages",
+          "Create About and Contact pages",
+          "Add .gov outbound links to legal content",
+          "Complete Article schema on all applicable pages",
+          "Add WebSite + BreadcrumbList schema",
+          "Optimize Google Fonts loading"
+        ]
+      },
+      {
+        "name": "Phase 3: AI Search & Image Optimization",
+        "timeframe": "Week 4",
+        "items": [
+          "Create llms.txt",
+          "Add Key Takeaways blocks to all pages",
+          "Add featured images to blog posts",
+          "Add RSS feed",
+          "Unify title tag brand suffix"
+        ]
+      },
+      {
+        "name": "Phase 4: Monitoring & Iteration",
+        "timeframe": "Ongoing",
+        "items": [
+          "Publish 2-4 blog articles per month",
+          "Configure security headers at CDN",
+          "Monitor Core Web Vitals via Search Console",
+          "Submit to Google Search Console and Bing Webmaster Tools",
+          "Track AI search citations"
+        ]
+      }
+    ]
+  },
+  "artifacts": {
+    "report_file": "FULL-AUDIT-REPORT.md",
+    "findings_dir": "findings/"
+  }
+}

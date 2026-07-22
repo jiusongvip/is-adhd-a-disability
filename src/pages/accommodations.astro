@@ -1,0 +1,33 @@
+ ---
+ import BaseLayout from "../layouts/BaseLayout.astro";
+ import { siteConfig } from "../data/site";
+  const pageSchema = { "@context": "https://schema.org", "@type": "Article", "headline": "ADHD Workplace Accommodations: Complete Guide", "description": "Practical guide to ADHD workplace accommodations including focus strategies, time management, and how to submit a request.", "datePublished": "2026-07-22", "publisher": siteConfig.publisher, "mainEntityOfPage": { "@type": "WebPage", "@id": "https://isadhdadisability.com/accommodations" } };
+ ---
+ <BaseLayout title="ADHD Workplace Accommodations: Complete Guide" description="Practical guide to ADHD workplace accommodations. Includes focus strategies, time management, communication support, and how to submit a request." canonicalURL="https://isadhdadisability.com/accommodations" schema={pageSchema}>
+   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 md:pt-20 md:pb-16">
+     <nav class="text-sm text-zinc-400 mb-6"><a href="/" class="hover:text-accent">Home</a> / Accommodations</nav>
+     <div class="max-w-3xl">
+       <p class="text-sm font-medium text-accent mb-4">Practical Guide</p>
+       <h1 class="text-3xl md:text-5xl font-bold text-zinc-900 leading-tight tracking-tight">ADHD Workplace Accommodations</h1>
+       <p class="mt-6 text-lg text-zinc-600 leading-relaxed max-w-2xl">Reasonable accommodations are adjustments to your work environment that help you perform your job effectively. Here is a detailed list of accommodations that can help people with ADHD thrive at work.</p>
+     </div>
+   </section>
+   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-24"><div class="max-w-3xl prose">
+     <h2>Focus and distraction management</h2>
+     <h3>Environmental adjustments</h3>
+     <ul><li>Private office or quiet workspace away from high-traffic areas</li><li>Noise-canceling headphones or white noise machine</li><li>Permission to use focus apps that block distracting websites</li><li>"Do not disturb" blocks on calendar for deep work periods</li><li>Reduced visual distractions (desk away from windows, cubicle walls)</li></ul>
+     <h2>Time management and organization</h2>
+     <ul><li>Flexible schedule with adjusted start/end times</li><li>Remote or hybrid work options</li><li>Regular one-on-one check-ins with supervisor to clarify priorities</li><li>Written instructions for tasks, not just verbal</li><li>Project management software with clear deadlines and reminders</li><li>Breaking large projects into smaller milestones</li><li>Additional time for learning new systems or processes</li></ul>
+     <h2>Communication support</h2>
+     <ul><li>Written summaries after meetings</li><li>Clear, specific feedback with actionable steps</li><li>Email templates for routine communications</li><li>Alternative communication channels (e.g., Slack over phone calls)</li><li>Grace period to formulate responses in meetings</li></ul>
+     <h2>Technology and tools</h2>
+     <h3>Recommended apps and software</h3>
+     <ul><li>Speech-to-text software for note-taking</li><li>Dual monitors to reduce window-switching</li><li>Digital task management apps (Todoist, Notion, Asana)</li><li>Calendar software with customizable reminders</li><li>Grammarly or similar writing assistance tools</li><li>Browser extensions to limit tab overload</li></ul>
+     <h2>Work environment adjustments</h2>
+     <ul><li>Standing desk or treadmill desk option</li><li>Fidget tools (stress ball, fidget cube) permitted</li><li>Permission to take short movement breaks</li><li>Natural lighting where possible (reduced fluorescent light exposure)</li><li>Temperature control within reasonable limits</li></ul>
+     <h2>How to request accommodations</h2>
+     <h3>Step-by-step request process</h3>
+     <ol><li><strong>Identify the specific need:</strong> What exactly is challenging, and what adjustment would help?</li><li><strong>Document your diagnosis:</strong> Get a letter from your healthcare provider describing your ADHD and recommended accommodations</li><li><strong>Submit a written request:</strong> Address it to HR or your disability services coordinator</li><li><strong>Be specific but flexible:</strong> Propose accommodations you think would help, but be open to alternatives</li><li><strong>Participate in the interactive process:</strong> Work with your employer to find solutions that work for both sides</li></ol>
+   </div></section>
+   <section class="border-t border-zinc-200"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8"><p class="text-xs text-zinc-400 leading-relaxed max-w-3xl"><strong class="text-zinc-500">Disclaimer:</strong> This page provides general information about accommodations. The specific accommodations that are reasonable vary by job, employer, and individual circumstances.</p></div></section>
+ </BaseLayout>

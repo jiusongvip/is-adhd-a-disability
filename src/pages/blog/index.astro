@@ -1,0 +1,33 @@
+ ---
+ import BaseLayout from "../../layouts/BaseLayout.astro";
+ const posts = [
+   { href: "/blog/myths", title: "5 Myths About ADHD and Disability Status Debunked", date: "2026-07-15", desc: "Separating fact from fiction about ADHD and disability status." },
+   { href: "/blog/doctor-note", title: "How to Get an ADHD Disability Doctor's Note", date: "2026-07-10", desc: "Step-by-step guide to obtaining proper medical documentation for your ADHD disability claim." },
+   { href: "/blog/ada-cases", title: "ADHD and the ADA: Key Court Cases That Changed Everything", date: "2026-07-05", desc: "Major legal decisions that shaped how ADHD is treated under the ADA." }
+ ];
+ const pageSchema = { "@context": "https://schema.org", "@type": "Blog", "name": "ADHD Disability Blog", "description": "Articles about ADHD and disability status, legal rights, accommodations, and practical guidance.", "url": "https://isadhdadisability.com/blog", "blogPost": posts.map(p => ({ "@type": "BlogPosting", "headline": p.title, "url": `https://isadhdadisability.com${p.href}`, "datePublished": p.date, "description": p.desc })) };
+ ---
+ <BaseLayout title="ADHD Disability Blog: Legal Guides and Updates" description="Articles about ADHD and disability status, legal rights, accommodations, and practical guidance for navigating workplace and school disability claims." canonicalURL="https://isadhdadisability.com/blog" schema={pageSchema}>
+   <section class="hero-surface border-b border-emerald-100">
+     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12 md:pt-24 md:pb-18">
+       <nav class="text-sm text-zinc-400 mb-6"><a href="/" class="hover:text-accent">Home</a> / Blog</nav>
+       <div class="max-w-3xl"><p class="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-dark mb-5 bg-accent-light px-3 py-1 rounded-full"><span class="w-1.5 h-1.5 rounded-full bg-accent"></span>Articles and Guides</p><h1 class="text-3xl md:text-5xl font-extrabold text-zinc-900 leading-none tracking-tight">ADHD Disability Blog</h1><p class="mt-6 text-lg text-zinc-600 leading-relaxed max-w-2xl">In-depth articles about ADHD disability rights, laws, accommodations, and practical guidance.</p></div>
+     </div>
+   </section>
+   <section class="section-band"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20"><div class="max-w-3xl">
+     <h2 class="text-2xl font-bold text-zinc-900 mb-8">Latest articles</h2>
+     <div class="divide-y divide-zinc-200">
+       {posts.map((p) => (<article class="py-6"><a href={p.href} class="block group"><time class="text-xs text-zinc-400">{p.date}</time><h3 class="text-lg font-bold text-zinc-900 group-hover:text-accent transition-colors mt-1">{p.title}</h3><p class="mt-1 text-sm text-zinc-500">{p.desc}</p></a></article>))}
+     </div>
+   </div></div></section>
+   <section class="section-band-alt border-t border-zinc-200"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16"><div class="max-w-3xl">
+     <h2 class="text-2xl font-bold text-zinc-900 mb-6">Browse by topic</h2>
+     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+       <a href="/ada" class="p-4 bg-white border border-zinc-200 rounded-lg hover:border-accent-border transition-colors"><span class="font-semibold text-zinc-900">ADA and Legal Rights</span><p class="text-sm text-zinc-500 mt-1">Your protections under federal law</p></a>
+       <a href="/school" class="p-4 bg-white border border-zinc-200 rounded-lg hover:border-accent-border transition-colors"><span class="font-semibold text-zinc-900">School and Education</span><p class="text-sm text-zinc-500 mt-1">504 plans, IEPs, and student rights</p></a>
+       <a href="/workplace" class="p-4 bg-white border border-zinc-200 rounded-lg hover:border-accent-border transition-colors"><span class="font-semibold text-zinc-900">Workplace Rights</span><p class="text-sm text-zinc-500 mt-1">Accommodations and disclosure</p></a>
+       <a href="/ssdi" class="p-4 bg-white border border-zinc-200 rounded-lg hover:border-accent-border transition-colors"><span class="font-semibold text-zinc-900">SSDI and Benefits</span><p class="text-sm text-zinc-500 mt-1">Eligibility and application guide</p></a>
+     </div>
+   </div></div></section>
+   <section class="border-t border-zinc-200"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8"><p class="text-xs text-zinc-400 leading-relaxed max-w-3xl"><strong class="text-zinc-500">Disclaimer:</strong> Articles provide general information and do not constitute legal or medical advice.</p></div></section>
+ </BaseLayout>

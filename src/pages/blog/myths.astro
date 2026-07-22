@@ -1,0 +1,29 @@
+ ---
+ import BaseLayout from "../../layouts/BaseLayout.astro";
+import { siteConfig } from "../../data/site";
+ const pageSchema = { "@context": "https://schema.org", "@type": "Article", "headline": "5 Myths About ADHD and Disability Status Debunked", "description": "Debunking common myths about ADHD and disability status. Learn the legal and medical facts about ADHD under the ADA, SSDI, and education law.", "datePublished": "2026-07-15", "publisher": siteConfig.publisher, "mainEntityOfPage": { "@type": "WebPage", "@id": "https://isadhdadisability.com/blog/myths" } };
+ ---
+ <BaseLayout title="5 Myths About ADHD and Disability Status Debunked" description="Debunking common myths about ADHD and disability status. Learn the legal and medical facts about ADHD under the ADA, SSDI, and education law." canonicalURL="https://isadhdadisability.com/blog/myths" schema={pageSchema}>
+   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 md:pt-20 md:pb-16">
+     <nav class="text-sm text-zinc-400 mb-6"><a href="/" class="hover:text-accent">Home</a> / <a href="/blog" class="hover:text-accent">Blog</a> / Myths</nav>
+     <div class="max-w-3xl"><p class="text-sm font-medium text-accent mb-4">July 15, 2026</p><h1 class="text-3xl md:text-5xl font-bold text-zinc-900 leading-tight tracking-tight">5 Myths About ADHD and Disability Status Debunked</h1><p class="mt-6 text-lg text-zinc-600 leading-relaxed max-w-2xl">There is a lot of confusion about whether ADHD qualifies as a disability. Let us clear up the most common misconceptions with facts from law and medicine.</p></div>
+   </section>
+   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-24"><div class="max-w-3xl prose">
+     <h2>Myth 1: "ADHD is not a real disability -- it is just a lack of discipline"</h2>
+     <h3>What the ADA and WHO say</h3>
+     <p><strong>Fact:</strong> ADHD is a neurodevelopmental disorder recognized by the American Psychiatric Association, the CDC, the NIH, and the World Health Organization. Under the ADA and Section 504, ADHD is a recognized disability when it substantially limits major life activities like concentrating, working, or learning. The Americans with Disabilities Act Amendments Act of 2008 explicitly made it easier for conditions like ADHD to qualify.</p>
+     <h2>Myth 2: "If medication manages your symptoms, ADHD is no longer a disability"</h2>
+     <h3>The ADAAA mitigating measures rule</h3>
+     <p><strong>Fact:</strong> The ADAAA specifically requires that ADHD be evaluated <strong>without considering mitigating measures</strong> such as medication. Even if Adderall or other medications help you function, your ADHD can still legally qualify as a disability. This is one of the most important but misunderstood protections in disability law.</p>
+     <h2>Myth 3: "You can easily get SSDI benefits for ADHD"</h2>
+     <h3>SSA approval rates for ADHD-only claims</h3>
+     <p><strong>Fact:</strong> While ADHD can technically qualify for SSDI, the reality is that <strong>ADHD-only claims are rarely approved</strong>. The SSA requires proof that the condition prevents you from performing any substantial gainful activity. Most successful ADHD-related SSDI claims involve ADHD combined with other conditions like anxiety, depression, or learning disabilities. Expect to be denied at the initial level and to need an attorney for the hearing stage.</p>
+     <h2>Myth 4: "Only children can get disability accommodations for ADHD"</h2>
+     <h3>Adult ADHD workplace protections</h3>
+     <p><strong>Fact:</strong> The ADA protects workers of all ages. Adults with ADHD have the same right to reasonable accommodations in the workplace as children have in school. Adult ADHD is widely recognized, and workplace accommodations like flexible schedules, quiet workspaces, and written instructions are protected under federal law.</p>
+     <h2>Myth 5: "If you have a job, you cannot have an ADHD disability"</h2>
+     <h3>Employment status does not disqualify you</h3>
+     <p><strong>Fact:</strong> Holding a job does not disqualify you. Many people with disabilities -- including ADHD -- work while having legal disability status. The question under the ADA is whether your ADHD substantially limits a major life activity, not whether you maintain employment. An employee with ADHD who manages to hold a job through extraordinary effort or coping strategies may still be entitled to accommodations.</p>
+   </div></section>
+   <section class="border-t border-zinc-200"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8"><p class="text-xs text-zinc-400 leading-relaxed max-w-3xl"><strong class="text-zinc-500">Disclaimer:</strong> This article provides general information and does not constitute legal or medical advice.</p></div></section>
+ </BaseLayout>

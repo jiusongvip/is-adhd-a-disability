@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageSchema = { "@context": "https://schema.org", "@type": "ContactPage", "name": "Contact Us", "url": "https://isadhdadisability.com/contact" };
+---
+<BaseLayout title="Contact Us" description="Get in touch with the Is ADHD a Disability team. Report errors, suggest topics, or ask questions about our content." canonicalURL="https://isadhdadisability.com/contact" schema={pageSchema}>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 md:pt-20 md:pb-16">
+    <nav class="text-sm text-zinc-400 mb-6"><a href="/" class="hover:text-accent">Home</a> / Contact</nav>
+    <div class="max-w-3xl">
+      <p class="text-sm font-medium text-accent mb-4">Get in Touch</p>
+      <h1 class="text-3xl md:text-5xl font-bold text-zinc-900 leading-tight tracking-tight">Contact Us</h1>
+      <p class="mt-6 text-lg text-zinc-600 leading-relaxed max-w-2xl">Have a question, spotted an error, or want to suggest a topic we should cover? We would love to hear from you.</p>
+    </div>
+  </section>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-24"><div class="max-w-3xl space-y-10">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+      <div class="p-6 bg-white border border-zinc-200 rounded-xl">
+        <p class="font-bold text-zinc-900 mb-2">Report an error</p>
+        <p class="text-sm text-zinc-500 leading-relaxed">If you find inaccurate or outdated information on any page, let us know so we can correct it.</p>
+      </div>
+      <div class="p-6 bg-white border border-zinc-200 rounded-xl">
+        <p class="font-bold text-zinc-900 mb-2">Suggest a topic</p>
+        <p class="text-sm text-zinc-500 leading-relaxed">Is there an ADHD disability topic we have not covered? Tell us what you would like to see.</p>
+      </div>
+      <div class="p-6 bg-white border border-zinc-200 rounded-xl">
+        <p class="font-bold text-zinc-900 mb-2">General questions</p>
+        <p class="text-sm text-zinc-500 leading-relaxed">Questions about the site, our editorial process, or partnership opportunities.</p>
+      </div>
+      <div class="p-6 bg-white border border-zinc-200 rounded-xl">
+        <p class="font-bold text-zinc-900 mb-2">Legal disclaimer</p>
+        <p class="text-sm text-zinc-500 leading-relaxed">We cannot provide legal or medical advice. For personal guidance, consult a qualified attorney or healthcare provider.</p>
+      </div>
+    </div>
+    <div class="callout-accent p-6 rounded-xl">
+      <p class="font-bold text-zinc-900 text-lg mb-2">Important note</p>
+      <p class="text-sm text-zinc-600 leading-relaxed">This site provides general information only and does not offer legal, medical, or professional advice. We cannot answer questions about specific personal situations. For individualized guidance, please consult a licensed attorney, psychologist, or disability advocate in your area.</p>
+    </div>
+  </div></section>
+  <section class="border-t border-zinc-200"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8"><p class="text-xs text-zinc-400 leading-relaxed max-w-3xl"><strong class="text-zinc-500">Response time:</strong> We typically respond within 2-3 business days.</p></div></section>
+</BaseLayout>

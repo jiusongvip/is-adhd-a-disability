@@ -1,0 +1,46 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageSchema = { "@context": "https://schema.org", "@type": "AboutPage", "name": "About Is ADHD a Disability?", "description": "Learn about our mission to provide clear, accurate information about ADHD disability status under US law.", "url": "https://isadhdadisability.com/about", "publisher": { "@type": "Organization", "name": "Is ADHD a Disability?", "url": "https://isadhdadisability.com" } };
+---
+<BaseLayout title="About Us" description="Learn about our mission to provide clear, practical information about ADHD disability rights under US law. Who we are, our editorial standards, and how we ensure accuracy." canonicalURL="https://isadhdadisability.com/about" schema={pageSchema}>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 md:pt-20 md:pb-16">
+    <nav class="text-sm text-zinc-400 mb-6"><a href="/" class="hover:text-accent">Home</a> / About</nav>
+    <div class="max-w-3xl">
+      <p class="text-sm font-medium text-accent mb-4">About Us</p>
+      <h1 class="text-3xl md:text-5xl font-bold text-zinc-900 leading-tight tracking-tight">About Is ADHD a Disability?</h1>
+      <p class="mt-6 text-lg text-zinc-600 leading-relaxed max-w-2xl">We created this site to cut through the confusion surrounding ADHD and disability law. Millions of people live with ADHD, yet most have no idea what legal protections they may be entitled to -- or how to access them.</p>
+    </div>
+  </section>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-24"><div class="max-w-3xl prose">
+    <h2>Our mission</h2>
+    <p>Our goal is simple: provide clear, practical, and legally accurate information about ADHD disability status under US federal law. We cover the ADA, Section 504, IDEA, SSDI/SSI, and workplace accommodations -- giving people the knowledge they need to advocate for themselves.</p>
+
+    <h2>What we cover</h2>
+    <ul>
+      <li><strong>Legal frameworks:</strong> How the ADA, ADAAA, Section 504, and IDEA define disability and protect individuals with ADHD</li>
+      <li><strong>Workplace rights:</strong> Accommodations, disclosure strategies, and what to do if your rights are violated</li>
+      <li><strong>Education rights:</strong> 504 Plans, IEPs, college accommodations, and parent rights</li>
+      <li><strong>Disability benefits:</strong> SSDI and SSI eligibility, application processes, and how to strengthen your claim</li>
+      <li><strong>International comparisons:</strong> How ADHD disability status differs across the US, UK, Canada, Australia, and more</li>
+    </ul>
+
+    <h2>Our editorial standards</h2>
+    <p>We take accuracy seriously, especially on legal and medical topics. Here is how we ensure quality:</p>
+    <ul>
+      <li><strong>Primary sources:</strong> We reference the actual text of laws (ADA, Section 504, IDEA) and official government guidance from the EEOC, SSA, and Department of Education</li>
+      <li><strong>Current information:</strong> We review and update content when laws change or new court decisions affect ADHD disability status</li>
+      <li><strong>Clear disclaimers:</strong> Every page includes a disclaimer that our content is informational, not legal or medical advice</li>
+      <li><strong>No sensationalism:</strong> We present facts, not hype. We are clear about when ADHD qualifies and when it does not</li>
+    </ul>
+
+    <h2>Important disclaimer</h2>
+    <div class="callout-accent p-6 my-8 not-prose">
+      <p class="font-bold text-zinc-900 text-lg mb-2">This site provides general information only</p>
+      <p class="text-sm text-zinc-600 leading-relaxed">Nothing on this site constitutes legal, medical, or professional advice. Laws vary by jurisdiction and individual circumstances. For guidance specific to your situation, please consult a qualified attorney, healthcare provider, or disability advocate.</p>
+    </div>
+
+    <h2>Contact us</h2>
+    <p>Have a question, correction, or suggestion? Visit our <a href="/contact">contact page</a> to get in touch.</p>
+  </div></section>
+  <section class="border-t border-zinc-200"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8"><p class="text-xs text-zinc-400 leading-relaxed max-w-3xl"><strong class="text-zinc-500">Last updated:</strong> July 2026</p></div></section>
+</BaseLayout>

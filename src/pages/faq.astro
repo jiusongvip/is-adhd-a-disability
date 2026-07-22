@@ -1,0 +1,56 @@
+ ---
+ import BaseLayout from "../layouts/BaseLayout.astro";
+ const faqCategories = [
+   { category: "ADA and Legal Status", questions: [
+     { q: "Is ADHD a disability under the ADA?", a: "Yes. ADHD can qualify as a disability under the ADA when it substantially limits one or more major life activities, such as concentrating, working, or learning." },
+     { q: "Is ADHD always considered a disability?", a: "No. ADHD is considered a disability when it substantially limits major life activities. Some people with mild ADHD may not meet the legal standard, but the ADAAA of 2008 made it easier for ADHD to qualify." },
+     { q: "Does the ADA cover ADD as well as ADHD?", a: "Yes. ADD (Attention Deficit Disorder) is an outdated term, but it is treated the same as ADHD inattentive type under the ADA." },
+     { q: "Is ADHD a disability under Section 504?", a: "Yes. ADHD qualifies as a disability under Section 504 of the Rehabilitation Act, which protects students in schools that receive federal funding." },
+     { q: "When is ADHD not a disability?", a: "ADHD may not qualify as a disability under the law when symptoms are mild and do not substantially limit major life activities, or when medication and coping strategies fully mitigate symptoms." },
+     { q: "Is ADHD a permanent disability?", a: "ADHD is generally considered a lifelong condition, though symptoms may change with age. Under the ADA, ADHD is typically treated as a permanent disability if it is chronic and substantially limiting." },
+     { q: "Is ADHD a mental disability?", a: "Yes. Under the ADA, ADHD is classified as a mental impairment. The law groups ADHD with mental health conditions for disability determination." },
+     { q: "Is ADHD a physical or mental disability?", a: "ADHD is classified as a mental disability under US law, though it has neurological origins and can affect physical behaviors." }
+   ]},
+   { category: "Diagnosis and Documentation", questions: [
+     { q: "How do I get ADHD documented as a disability?", a: "Obtain a formal diagnosis from a licensed psychologist, psychiatrist, or physician. Request documentation that specifically describes how ADHD limits your major life activities and what accommodations are recommended." },
+     { q: "What kind of doctor can diagnose ADHD for disability claims?", a: "A licensed clinical psychologist, psychiatrist, or medical doctor (MD/DO) can provide a diagnosis recognized for disability purposes. Some states also allow licensed clinical social workers or nurse practitioners." },
+     { q: "Do I need a neuropsychological evaluation?", a: "Not always. For workplace accommodations, a letter from your treating physician may suffice. For SSDI claims, a comprehensive neuropsychological evaluation significantly strengthens your application." }
+   ]},
+   { category: "Workplace", questions: [
+     { q: "Does ADHD qualify for FMLA leave?", a: "Yes. ADHD can qualify as a serious health condition under the Family and Medical Leave Act if it requires ongoing medical treatment and causes periods of incapacity." },
+     { q: "Can my employer fire me for having ADHD?", a: "No, not because of the ADHD itself. The ADA prohibits discrimination based on disability. However, you can still be fired for legitimate, nondiscriminatory reasons like poor performance if accommodations were not requested or would not resolve the performance issues." },
+     { q: "Should I tell my boss I have ADHD?", a: "It depends. You are not required to disclose. Disclose if you need specific accommodations. Consider disclosing after you have established yourself in the role rather than during the hiring process." },
+     { q: "Can ADHD prevent me from getting certain jobs?", a: "Generally no, unless the ADHD would prevent you from performing the essential functions of the job even with reasonable accommodations. Some safety-sensitive positions may have specific requirements." }
+   ]},
+   { category: "School and Education", questions: [
+     { q: "Is ADHD a disability under IDEA?", a: "Yes. ADHD can qualify under IDEA's 'Other Health Impairment' (OHI) category when it adversely affects educational performance and requires special education services." },
+     { q: "What is the difference between a 504 Plan and an IEP?", a: "A 504 Plan provides accommodations to ensure equal access. An IEP provides specialized instruction, measurable goals, and related services. 504 Plans are more common for ADHD; IEPs are appropriate when ADHD significantly impacts academic performance." },
+     { q: "Can a college reject me because I have ADHD?", a: "No, colleges cannot discriminate based on disability. However, you must still meet the same academic admission standards as other applicants." },
+     { q: "What accommodations can college students with ADHD get?", a: "Extended test time, note-taking services, priority registration, reduced course load, quiet testing rooms, permission to record lectures, and assistive technology." }
+   ]},
+   { category: "SSDI and Benefits", questions: [
+     { q: "Can you get SSI for ADHD?", a: "Yes, SSI is possible for ADHD if you meet the medical criteria and the financial need requirements. This is more common for children with severe ADHD." },
+     { q: "How much SSDI can I get for ADHD?", a: "SSDI payment amounts are based on your work history and average lifetime earnings, not the specific disability. The average SSDI benefit in 2026 is approximately $1,500-1,900 per month." },
+     { q: "Can children get SSI for ADHD?", a: "Yes. Children with severe ADHD that causes marked functional limitations may qualify for SSI. The SSA evaluates children differently from adults." },
+     { q: "Is ADHD a VA disability?", a: "Yes. The VA can rate ADHD as a service-connected disability if it was diagnosed during or aggravated by military service. Ratings typically range from 0% to 50%." }
+   ]},
+   { category: "By Country", questions: [
+     { q: "Is ADHD a disability in the UK?", a: "Yes. Under the Equality Act 2010, ADHD can qualify as a disability if it has a substantial and long-term adverse effect on daily activities. You are protected from discrimination and entitled to reasonable adjustments." },
+     { q: "Is ADHD a disability in Canada?", a: "Yes. ADHD can qualify as a disability under the Canadian Human Rights Act and provincial human rights codes, protecting against discrimination and entitling individuals to accommodations." },
+     { q: "Is ADHD a disability in Australia?", a: "Yes. ADHD is recognized under the Disability Discrimination Act 1992, and individuals may access the National Disability Insurance Scheme (NDIS) in some cases." }
+   ]}
+ ];
+ const faqEntities = faqCategories.flatMap(c => c.questions.map(q => ({ "@type": "Question", "name": q.q, "acceptedAnswer": { "@type": "Answer", "text": q.a } })));
+ ---
+ <BaseLayout title="Is ADHD a Disability? FAQ: 50+ Questions Answered" description="Quick answers to all your questions about ADHD and disability status. From ADA to SSDI, school to workplace. Find the answer you need in seconds." canonicalURL="https://isadhdadisability.com/faq" schema={{ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqEntities }}>
+   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 md:pt-20 md:pb-16">
+     <nav class="text-sm text-zinc-400 mb-6"><a href="/" class="hover:text-accent">Home</a> / FAQ</nav>
+     <div class="max-w-3xl"><p class="text-sm font-medium text-accent mb-4">Frequently Asked Questions</p><h1 class="text-3xl md:text-5xl font-bold text-zinc-900 leading-tight tracking-tight">Is ADHD a Disability? Your Top Questions Answered</h1><p class="mt-6 text-lg text-zinc-600 leading-relaxed max-w-2xl">Quick answers to the most common questions about ADHD and disability status. Click any question to expand or browse by category.</p></div>
+     <div class="mt-8 flex flex-wrap gap-2 max-w-3xl">{[...new Set(faqCategories.map(c => c.category))].map(cat => (<a href={`#${cat.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`} class="inline-flex px-3 py-1.5 text-xs font-medium border border-zinc-200 rounded-full text-zinc-600 hover:border-accent-border hover:text-accent transition-colors">{cat}</a>))}</div>
+   </section>
+   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-24"><div class="max-w-3xl space-y-12">
+     <h2 class="text-2xl font-bold text-zinc-900 mb-6">Questions by category</h2>
+     {faqCategories.map((cat) => (<div id={cat.category.toLowerCase().replace(/[^a-z0-9]+/g, "-")}><h3 class="text-xl font-semibold text-zinc-900 mb-6 border-b border-zinc-200 pb-2">{cat.category}</h3><div class="divide-y divide-zinc-200">{cat.questions.map((item) => (<details class="group py-4"><summary class="faq-summary cursor-pointer flex justify-between items-center font-medium text-zinc-900 hover:text-accent transition-colors text-sm">{item.q}<svg class="w-5 h-5 text-zinc-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary><p class="mt-3 text-sm text-zinc-500 leading-relaxed pb-2">{item.a}</p></details>))}</div></div>))}
+   </div></section>
+   <section class="border-t border-zinc-200"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8"><p class="text-xs text-zinc-400 leading-relaxed max-w-3xl"><strong class="text-zinc-500">Disclaimer:</strong> Answers are for general informational purposes and do not constitute legal advice.</p></div></section>
+ </BaseLayout>

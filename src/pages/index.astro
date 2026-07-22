@@ -1,17 +1,227 @@
----
-
----
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+ ---
+ import BaseLayout from "../layouts/BaseLayout.astro";
+ const pageSchema = [
+   {
+     "@context": "https://schema.org",
+     "@type": "WebSite",
+     "name": "Is ADHD a Disability?",
+     "url": "https://isadhdadisability.com",
+     "description": "A clear, practical guide to ADHD disability status under US law.",
+     "potentialAction": {
+       "@type": "SearchAction",
+       "target": "https://isadhdadisability.com/?q={search_term_string}",
+       "query-input": "required name=search_term_string"
+     }
+   },
+   {
+     "@context": "https://schema.org",
+     "@type": "FAQPage",
+     "mainEntity": [
+       { "@type": "Question", "name": "Is ADHD a disability under the ADA?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, ADHD is considered a disability under the Americans with Disabilities Act (ADA) when it substantially limits one or more major life activities, such as concentrating, working, or learning." } },
+       { "@type": "Question", "name": "Can you get SSDI benefits for ADHD?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, but qualifying for SSDI with ADHD alone is difficult. You must prove the condition severely limits your ability to work, and comprehensive medical documentation is required." } },
+       { "@type": "Question", "name": "Is ADHD a disability in school?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, ADHD can qualify as a disability under Section 504 and potentially under IDEA, entitling students to accommodations like extended test time, preferential seating, and modified assignments." } },
+       { "@type": "Question", "name": "Is ADHD a learning disability?", "acceptedAnswer": { "@type": "Answer", "text": "ADHD is not technically classified as a specific learning disability, but it frequently co-occurs with learning disabilities and can qualify for similar protections and accommodations under disability law." } }
+     ]
+   }
+ ];
+ const sections = [
+   { href: "/ada", title: "Under the ADA", desc: "How the Americans with Disabilities Act protects individuals with ADHD in employment, public services, and daily life." },
+   { href: "/school", title: "At School", desc: "Section 504 plans, IEPs, and your child's rights to accommodations in K-12 and college." },
+   { href: "/workplace", title: "In the Workplace", desc: "Reasonable accommodations, disclosure strategies, and protection against discrimination." },
+   { href: "/ssdi", title: "For SSDI Benefits", desc: "How to apply for Social Security Disability benefits when ADHD limits your ability to work." }
+ ];
+ ---
+ <BaseLayout title="Is ADHD a Disability? ADA, School, Work, SSDI" description="Find out if ADHD qualifies as a disability under the ADA, at school, in the workplace, and for SSDI benefits. Clear, practical answers with legal context." canonicalURL="https://isadhdadisability.com/" schema={pageSchema}>
+   <section class="hero-surface border-b border-emerald-100">
+     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 md:pt-28 md:pb-24">
+       <div class="max-w-3xl">
+         <p class="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-dark mb-5 bg-accent-light px-3 py-1 rounded-full">
+           <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+           Complete Legal Guide
+         </p>
+         <h1 class="text-3xl md:text-5xl font-extrabold text-zinc-900 leading-none tracking-tight">
+           Is ADHD a Disability?
+         </h1>
+         <p class="mt-6 text-lg text-zinc-600 leading-relaxed max-w-2xl">
+           <strong class="text-accent-dark">Yes.</strong> ADHD is recognized as a disability under the ADA, Section 504, and other laws. But what that means in practice -- at work, at school, and for benefits -- depends on your situation. Here is what you need to know.
+         </p>
+         <div class="mt-8 flex flex-wrap gap-3">
+           <button onclick="document.getElementById('topics')?.scrollIntoView({behavior:'smooth'})" class="inline-flex items-center gap-2 px-5 py-3 bg-accent text-white font-semibold rounded-lg hover:bg-accent-dark transition-colors text-sm shadow-sm shadow-accent/20 cursor-pointer">
+             Explore Topics
+             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+           </button>
+           <a href="/faq" class="inline-flex items-center gap-2 px-5 py-3 border-2 border-emerald-200 text-accent-dark font-semibold rounded-lg hover:bg-accent-light transition-colors text-sm">
+             Quick FAQ
+           </a>
+         </div>
+       </div>
+     </div>
+   </section>
+ 
+   <section id="topics" class="section-band-alt">
+     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+       <h2 class="text-2xl font-bold text-zinc-900 mb-3">Where does ADHD qualify as a disability?</h2>
+       <p class="text-zinc-500 text-sm mb-10 max-w-xl">Four key areas where ADHD is recognized under US disability law.</p>
+       <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+         {sections.map((s, i) => (
+           <a href={s.href} class="group block p-7 bg-white border border-zinc-200 rounded-xl hover:border-accent-border hover:shadow-md hover:shadow-accent/5 transition-all duration-200">
+             <div class="flex items-start gap-4">
+               <span class="flex-shrink-0 w-10 h-10 rounded-lg bg-accent-light text-accent font-bold text-sm flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-colors">{i + 1}</span>
+               <div>
+                 <h3 class="font-bold text-zinc-900 group-hover:text-accent-dark transition-colors">{s.title}</h3>
+                 <p class="mt-1.5 text-sm text-zinc-500 leading-relaxed">{s.desc}</p>
+               </div>
+             </div>
+           </a>
+         ))}
+       </div>
+     </div>
+   </section>
+ 
+   <section class="section-band bg-grid-subtle border-y border-emerald-100">
+     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+       <h2 class="text-2xl font-bold text-zinc-900 mb-3">Key legal frameworks at a glance</h2>
+       <p class="text-zinc-500 text-sm mb-10 max-w-xl">The major US laws that define ADHD as a disability.</p>
+       <div class="overflow-x-auto rounded-xl border border-zinc-200 bg-white shadow-sm">
+         <table class="w-full text-sm text-left">
+           <thead>
+             <tr class="bg-accent-light/50">
+               <th class="py-3.5 px-5 font-semibold text-zinc-900">Law</th>
+               <th class="py-3.5 px-5 font-semibold text-zinc-900">Who It Protects</th>
+               <th class="py-3.5 px-5 font-semibold text-zinc-900">ADHD Coverage</th>
+               <th class="py-3.5 px-5 font-semibold text-zinc-900">Details</th>
+             </tr>
+           </thead>
+           <tbody class="text-zinc-600">
+             <tr class="border-t border-zinc-100 hover:bg-accent-light/30 transition-colors">
+               <td class="py-3 px-5 font-semibold text-zinc-900">ADA</td>
+               <td class="py-3 px-5">Employees, public access</td>
+               <td class="py-3 px-5"><span class="inline-flex items-center gap-1 text-accent-dark text-xs font-semibold bg-accent-light px-2 py-0.5 rounded">Covered</span></td>
+               <td class="py-3 px-5"><a href="/ada" class="text-accent hover:text-accent-dark font-medium">Learn more</a></td>
+             </tr>
+             <tr class="border-t border-zinc-100 hover:bg-accent-light/30 transition-colors">
+               <td class="py-3 px-5 font-semibold text-zinc-900">Section 504</td>
+               <td class="py-3 px-5">Students in public schools</td>
+               <td class="py-3 px-5"><span class="inline-flex items-center gap-1 text-accent-dark text-xs font-semibold bg-accent-light px-2 py-0.5 rounded">Covered</span></td>
+               <td class="py-3 px-5"><a href="/section-504" class="text-accent hover:text-accent-dark font-medium">Learn more</a></td>
+             </tr>
+             <tr class="border-t border-zinc-100 hover:bg-accent-light/30 transition-colors">
+               <td class="py-3 px-5 font-semibold text-zinc-900">IDEA</td>
+               <td class="py-3 px-5">Students needing special education</td>
+               <td class="py-3 px-5"><span class="inline-flex items-center gap-1 text-accent-dark text-xs font-semibold bg-accent-light px-2 py-0.5 rounded">OHI Category</span></td>
+               <td class="py-3 px-5"><a href="/school" class="text-accent hover:text-accent-dark font-medium">Learn more</a></td>
+             </tr>
+             <tr class="border-t border-zinc-100 hover:bg-accent-light/30 transition-colors">
+               <td class="py-3 px-5 font-semibold text-zinc-900">SSDI / SSI</td>
+               <td class="py-3 px-5">Workers unable to work</td>
+               <td class="py-3 px-5"><span class="inline-flex items-center gap-1 text-amber-700 text-xs font-semibold bg-amber-50 px-2 py-0.5 rounded">High bar</span></td>
+               <td class="py-3 px-5"><a href="/ssdi" class="text-accent hover:text-accent-dark font-medium">Learn more</a></td>
+             </tr>
+           </tbody>
+         </table>
+       </div>
+     </div>
+   </section>
+ 
+   <section class="section-band-alt">
+     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+       <h2 class="text-2xl font-bold text-zinc-900 mb-3">How to get ADHD recognized as a disability</h2>
+       <p class="text-zinc-500 text-sm mb-10 max-w-xl">A step-by-step process to establish ADHD disability status.</p>
+       <div class="max-w-2xl">
+         <ol class="space-y-6">
+           <li class="flex gap-5">
+             <span class="flex-shrink-0 w-10 h-10 rounded-xl bg-accent text-white font-bold text-sm flex items-center justify-center shadow-sm shadow-accent/20">1</span>
+             <div>
+               <h3 class="font-bold text-zinc-900">Get a formal diagnosis</h3>
+               <p class="mt-1 text-sm text-zinc-500 leading-relaxed">Obtain a documented ADHD diagnosis from a licensed psychologist, psychiatrist, or physician. This is the foundation for all disability claims.</p>
+             </div>
+           </li>
+           <li class="flex gap-5">
+             <span class="flex-shrink-0 w-10 h-10 rounded-xl bg-accent text-white font-bold text-sm flex items-center justify-center shadow-sm shadow-accent/20">2</span>
+             <div>
+               <h3 class="font-bold text-zinc-900">Document functional limitations</h3>
+               <p class="mt-1 text-sm text-zinc-500 leading-relaxed">Work with your doctor to document exactly how ADHD limits your daily functioning -- at work, in school, or in other major life activities.</p>
+             </div>
+           </li>
+           <li class="flex gap-5">
+             <span class="flex-shrink-0 w-10 h-10 rounded-xl bg-accent text-white font-bold text-sm flex items-center justify-center shadow-sm shadow-accent/20">3</span>
+             <div>
+               <h3 class="font-bold text-zinc-900">Identify the right legal framework</h3>
+               <p class="mt-1 text-sm text-zinc-500 leading-relaxed">Determine which law applies: <a href="/ada" class="text-accent hover:text-accent-dark font-medium">ADA</a> for employment, <a href="/school" class="text-accent hover:text-accent-dark font-medium">Section 504 or IDEA</a> for education, or <a href="/ssdi" class="text-accent hover:text-accent-dark font-medium">SSDI</a> for benefits.</p>
+             </div>
+           </li>
+           <li class="flex gap-5">
+             <span class="flex-shrink-0 w-10 h-10 rounded-xl bg-accent text-white font-bold text-sm flex items-center justify-center shadow-sm shadow-accent/20">4</span>
+             <div>
+               <h3 class="font-bold text-zinc-900">Submit your request</h3>
+               <p class="mt-1 text-sm text-zinc-500 leading-relaxed">For workplace accommodations, submit a formal request to HR. For school, request a 504 evaluation in writing. For SSDI, <a href="/ssdi" class="text-accent hover:text-accent-dark font-medium">file through the SSA</a>.</p>
+             </div>
+           </li>
+         </ol>
+       </div>
+     </div>
+   </section>
+ 
+   <section class="section-band bg-accent-light/40 border-y border-emerald-100">
+     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+       <div class="flex items-center justify-between mb-10">
+         <div>
+           <h2 class="text-2xl font-bold text-zinc-900 mb-2">Frequently asked questions</h2>
+           <p class="text-zinc-500 text-sm">Quick answers to the most common ADHD disability questions.</p>
+         </div>
+         <a href="/faq" class="hidden sm:inline-flex items-center gap-1.5 text-sm font-semibold text-accent-dark hover:text-accent-deeper transition-colors bg-white px-4 py-2 rounded-lg border border-emerald-200 shadow-sm">
+           View all 50+ FAQs
+           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+         </a>
+       </div>
+       <div class="max-w-2xl divide-y divide-emerald-200/60">
+         <details class="group py-5">
+           <summary class="faq-summary cursor-pointer flex justify-between items-center font-semibold text-zinc-900 hover:text-accent transition-colors">Is ADHD a disability under the ADA?<svg class="w-5 h-5 text-accent group-open:rotate-180 transition-transform flex-shrink-0 ml-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary>
+           <p class="mt-3 text-sm text-zinc-600 leading-relaxed pb-2">Yes. ADHD can qualify as a disability under the Americans with Disabilities Act when it substantially limits one or more major life activities. The ADA Amendments Act of 2008 broadened the definition to make it easier for conditions like ADHD to qualify.</p>
+         </details>
+         <details class="group py-5">
+           <summary class="faq-summary cursor-pointer flex justify-between items-center font-semibold text-zinc-900 hover:text-accent transition-colors">Can I get SSDI benefits for ADHD?<svg class="w-5 h-5 text-accent group-open:rotate-180 transition-transform flex-shrink-0 ml-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary>
+           <p class="mt-3 text-sm text-zinc-600 leading-relaxed pb-2">It is possible but challenging. The SSA requires proof that ADHD severely limits your ability to perform work-related activities. Most successful claims involve ADHD combined with other conditions.</p>
+         </details>
+         <details class="group py-5">
+           <summary class="faq-summary cursor-pointer flex justify-between items-center font-semibold text-zinc-900 hover:text-accent transition-colors">Is ADHD a learning disability?<svg class="w-5 h-5 text-accent group-open:rotate-180 transition-transform flex-shrink-0 ml-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary>
+           <p class="mt-3 text-sm text-zinc-600 leading-relaxed pb-2">ADHD is not technically a specific learning disability, but it frequently co-occurs with learning disabilities and is recognized as a disability under Section 504 and the ADA.</p>
+         </details>
+         <details class="group py-5">
+           <summary class="faq-summary cursor-pointer flex justify-between items-center font-semibold text-zinc-900 hover:text-accent transition-colors">What accommodations can I get for ADHD?<svg class="w-5 h-5 text-accent group-open:rotate-180 transition-transform flex-shrink-0 ml-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary>
+           <p class="mt-3 text-sm text-zinc-600 leading-relaxed pb-2">Common accommodations include flexible schedules, noise-reducing headphones, written instructions, and task management tools. See our <a href="/accommodations" class="text-accent hover:text-accent-dark font-medium">full accommodations guide</a>.</p>
+         </details>
+       </div>
+       <div class="mt-6 sm:hidden">
+         <a href="/faq" class="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-dark hover:text-accent-deeper transition-colors">View all 50+ FAQs <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></a>
+       </div>
+     </div>
+   </section>
+ 
+   <section class="section-band-alt">
+     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+       <h2 class="text-2xl font-bold text-zinc-900 mb-3">Dive deeper</h2>
+       <p class="text-zinc-500 text-sm mb-10 max-w-xl">Explore detailed guides on each aspect of ADHD disability law.</p>
+       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+         <a href="/ada" class="group block p-6 bg-white border border-zinc-200 rounded-xl hover:border-accent-border hover:shadow-md hover:shadow-accent/5 transition-all duration-200">
+           <p class="font-bold text-zinc-900 group-hover:text-accent-dark transition-colors">ADHD Under the ADA</p>
+           <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Learn how the ADA defines disability and when ADHD qualifies.</p>
+         </a>
+         <a href="/rights" class="group block p-6 bg-white border border-zinc-200 rounded-xl hover:border-accent-border hover:shadow-md hover:shadow-accent/5 transition-all duration-200">
+           <p class="font-bold text-zinc-900 group-hover:text-accent-dark transition-colors">Your Rights Checklist</p>
+           <p class="mt-2 text-sm text-zinc-500 leading-relaxed">A practical checklist of rights across employment, education, and housing.</p>
+         </a>
+         <a href="/by-country" class="group block p-6 bg-white border border-zinc-200 rounded-xl hover:border-accent-border hover:shadow-md hover:shadow-accent/5 transition-all duration-200">
+           <p class="font-bold text-zinc-900 group-hover:text-accent-dark transition-colors">ADHD Disability by Country</p>
+           <p class="mt-2 text-sm text-zinc-500 leading-relaxed">How ADHD disability status varies across the US, UK, Canada, and Australia.</p>
+         </a>
+       </div>
+     </div>
+   </section>
+ 
+   <section class="border-t border-zinc-200">
+     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+       <p class="text-xs text-zinc-400 leading-relaxed max-w-3xl"><strong class="text-zinc-500">Disclaimer:</strong> The information on this site is for general informational purposes only and does not constitute legal advice. Laws vary by jurisdiction and individual circumstances.</p>
+     </div>
+   </section>
+ </BaseLayout>

@@ -1,0 +1,28 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout title="Page Not Found" description="The page you are looking for does not exist. Browse our ADHD disability guides and resources." canonicalURL="https://isadhdadisability.com/404">
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-24 text-center">
+    <p class="text-7xl font-extrabold text-accent mb-4">404</p>
+    <h1 class="text-3xl font-bold text-zinc-900 mb-4">Page Not Found</h1>
+    <p class="text-lg text-zinc-500 mb-10 max-w-md mx-auto">The page you are looking for may have been moved or does not exist. Here are some helpful links:</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-lg mx-auto text-left">
+      <a href="/" class="p-5 bg-white border border-zinc-200 rounded-xl hover:border-accent-border hover:shadow-md transition-all">
+        <p class="font-bold text-zinc-900">Home</p>
+        <p class="text-sm text-zinc-500 mt-1">Back to the main page</p>
+      </a>
+      <a href="/faq" class="p-5 bg-white border border-zinc-200 rounded-xl hover:border-accent-border hover:shadow-md transition-all">
+        <p class="font-bold text-zinc-900">FAQ</p>
+        <p class="text-sm text-zinc-500 mt-1">50+ ADHD disability questions answered</p>
+      </a>
+      <a href="/ada" class="p-5 bg-white border border-zinc-200 rounded-xl hover:border-accent-border hover:shadow-md transition-all">
+        <p class="font-bold text-zinc-900">ADA Guide</p>
+        <p class="text-sm text-zinc-500 mt-1">ADHD protections under the ADA</p>
+      </a>
+      <a href="/blog" class="p-5 bg-white border border-zinc-200 rounded-xl hover:border-accent-border hover:shadow-md transition-all">
+        <p class="font-bold text-zinc-900">Blog</p>
+        <p class="text-sm text-zinc-500 mt-1">Latest articles and guides</p>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

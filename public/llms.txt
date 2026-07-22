@@ -1,0 +1,41 @@
+# Is ADHD a Disability?
+
+> A clear, practical guide to ADHD disability status under US law. Covers ADA protections, school rights (Section 504, IDEA, IEP), workplace accommodations, SSDI/SSI benefits, and international comparisons.
+
+## About This Site
+
+This site provides general legal and practical information about how ADHD qualifies as a disability under various US federal laws. It is not legal advice.
+
+## Core Topics
+
+- [Is ADHD a Disability Under the ADA?](/ada): Legal definitions, ADAAA of 2008, employer obligations, key court cases, and how to request accommodations.
+- [Is ADHD a Disability in School?](/school): Section 504 plans, IEPs, IDEA eligibility, and college accommodations.
+- [Is ADHD a Disability at Work?](/workplace): Reasonable accommodations, the disclosure decision, and filing EEOC complaints.
+- [Can You Get Disability Benefits for ADHD?](/ssdi): SSDI vs SSI, SSA listings, why ADHD-only claims face challenges, and how to strengthen your claim.
+- [ADHD and Section 504](/section-504): The most common pathway for student accommodations, evaluation process, parent rights.
+
+## Reference Pages
+
+- [FAQ: 50+ Questions Answered](/faq): Quick answers organized by category (ADA, diagnosis, workplace, school, SSDI, international).
+- [Rights Checklist](/rights): A practical checklist of legal rights across employment, education, public services, and housing.
+- [Workplace Accommodations Guide](/accommodations): Detailed list of accommodations for focus, time management, communication, and technology.
+- [ADHD Disability by Country](/by-country): How ADHD disability status varies across the US, UK, Canada, Australia, EU, Ireland, and New Zealand.
+
+## Blog
+
+- [5 Myths About ADHD and Disability Status Debunked](/blog/myths)
+- [How to Get an ADHD Disability Doctor's Note](/blog/doctor-note)
+- [ADHD and the ADA: Key Court Cases That Changed Everything](/blog/ada-cases)
+
+## Key Laws Referenced
+
+- Americans with Disabilities Act (ADA) — https://www.ada.gov
+- ADA Amendments Act of 2008 (ADAAA)
+- Section 504 of the Rehabilitation Act of 1973 — https://www2.ed.gov/about/offices/list/ocr/
+- Individuals with Disabilities Education Act (IDEA)
+- Social Security Disability Insurance (SSDI) — https://www.ssa.gov/benefits/disability/
+- Fair Housing Act
+
+## Disclaimer
+
+This site provides general informational content only. It does not constitute legal, medical, or professional advice. Laws vary by jurisdiction and individual circumstances. Consult a qualified attorney or healthcare provider for guidance specific to your situation.

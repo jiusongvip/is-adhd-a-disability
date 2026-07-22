@@ -1,0 +1,73 @@
+ ---
+ import BaseLayout from "../layouts/BaseLayout.astro";
+ import { siteConfig } from "../data/site";
+  const pageSchema = { "@context": "https://schema.org", "@type": "Article", "headline": "Is ADHD a Disability Under the ADA?", "description": "Understand how the ADA protects individuals with ADHD. Covers legal definitions, accommodations, employer obligations, and key court cases.", "datePublished": "2026-07-22", "publisher": siteConfig.publisher, "mainEntityOfPage": { "@type": "WebPage", "@id": "https://isadhdadisability.com/ada" } };
+ ---
+  <BaseLayout title="Is ADHD a Disability Under the ADA?" description="Understand how the ADA protects individuals with ADHD. Covers legal definitions, accommodations, employer obligations, and key court cases that shaped the law." canonicalURL="https://isadhdadisability.com/ada" schema={pageSchema}>
+   <section class="hero-surface border-b border-emerald-100">
+     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12 md:pt-24 md:pb-18">
+       <nav class="text-sm text-zinc-400 mb-6"><a href="/" class="hover:text-accent">Home</a> / ADA and ADHD</nav>
+       <div class="max-w-3xl">
+         <p class="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-dark mb-5 bg-accent-light px-3 py-1 rounded-full"><span class="w-1.5 h-1.5 rounded-full bg-accent"></span>Americans with Disabilities Act</p>
+         <h1 class="text-3xl md:text-5xl font-extrabold text-zinc-900 leading-none tracking-tight">Is ADHD a Disability Under the ADA?</h1>
+         <p class="mt-6 text-lg text-zinc-600 leading-relaxed max-w-2xl">The short answer is <strong class="text-accent-dark">yes</strong>. ADHD can qualify as a disability under the ADA when it substantially limits one or more major life activities. Here is how the law defines it and what protections you have.</p>
+       </div>
+     </div>
+   </section>
+   <section class="section-band">
+     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20"><div class="max-w-3xl">
+       <div class="callout-accent p-6 rounded-xl mb-10 not-prose">
+         <p class="font-bold text-zinc-900 text-base mb-3">Key takeaways</p>
+         <ul class="text-sm text-zinc-600 space-y-1.5 leading-relaxed">
+           <li>ADHD qualifies as a disability under the ADA when it substantially limits a major life activity</li>
+           <li>The ADAAA of 2008 made it easier for ADHD to qualify -- medication cannot be considered</li>
+           <li>Employers with 15+ employees must provide reasonable accommodations</li>
+           <li>You are not required to disclose ADHD, but must do so to receive accommodations</li>
+         </ul>
+       </div>
+     <div class="prose">
+       <h2>What the ADA says about disability</h2>
+       <p>The <a href="https://www.ada.gov/law-and-regs/ada/" target="_blank" rel="noopener noreferrer">Americans with Disabilities Act of 1990</a> defines a person with a disability as someone who:</p>
+       <ol><li>Has a physical or mental impairment that <strong>substantially limits</strong> one or more major life activities</li><li>Has a record of such an impairment, or</li><li>Is regarded as having such an impairment</li></ol>
+       <p>ADHD falls under "mental impairment" and can qualify under any of these three definitions.</p>
+ 
+       <h2>Major life activities affected by ADHD</h2>
+       <p>Under the ADA, major life activities include (but are not limited to):</p>
+       <h3>Concentrating and thinking</h3>
+       <p>The most commonly cited limitation for ADHD. Difficulty sustaining focus, organizing thoughts, and completing tasks can substantially limit this major life activity.</p>
+       <h3>Working</h3>
+       <p>When ADHD impairs job performance through missed deadlines, disorganization, or difficulty managing multiple priorities, it can substantially limit the major life activity of working.</p>
+       <h3>Learning and reading</h3>
+       <p>ADHD can affect reading comprehension, retention, and the ability to learn new material -- especially relevant in educational settings and training environments.</p>
+       <h3>Communicating</h3>
+       <p>Social interactions affected by impulsivity, interrupting, or losing track of conversations can substantially limit the major life activity of communicating.</p>
+       <h3>Sleeping</h3>
+       <p>Recognized as a major life activity since 2008. ADHD commonly disrupts sleep through racing thoughts, difficulty winding down, and irregular sleep patterns.</p>
+ 
+       <h2>The ADAAA of 2008: a critical shift</h2>
+       <p>The <strong>ADA Amendments Act of 2008 (ADAAA)</strong> significantly expanded protections:</p>
+       <ul><li>Broadened "substantially limits"</li><li><strong>Mitigating measures</strong> (medication) cannot be considered</li><li>Episodic or in-remission impairments still qualify</li><li>Shifted focus to whether discrimination occurred</li></ul>
+       <div class="callout-accent p-6 my-8 not-prose"><p class="font-bold text-zinc-900 text-lg mb-2">Do I need to disclose my ADHD to my employer?</p><p class="text-sm text-zinc-600 leading-relaxed">No. You are not required to disclose. But if you want ADA protections and accommodations, you must disclose and request them. Your employer is not required to provide accommodations you never asked for.</p></div>
+ 
+       <h2>Employer obligations under the ADA</h2>
+       <p>Under the ADA, employers with 15 or more employees must:</p>
+       <ul><li>Provide <a href="/accommodations">reasonable accommodations</a></li><li>Not discriminate in hiring, firing, promotion, or compensation</li><li>Engage in an "interactive process"</li><li>Not retaliate against accommodation requests</li></ul>
+ 
+       <h2>Key court cases</h2>
+       <p>Several landmark cases have shaped how ADHD is treated under the ADA:</p>
+       <h3>Jacques v. DiMarzio, Inc. (2002)</h3>
+       <p>An employee with ADHD received $320,000 for wrongful termination after the employer failed to provide reasonable accommodations. The court found the employer had not engaged in the interactive process.</p>
+       <h3>Gagliardo v. Connaught Laboratories (2002)</h3>
+       <p>The Third Circuit Court of Appeals found that ADHD was a compensable disability under the ADA. The court recognized ADHD as substantially limiting the major life activity of concentrating.</p>
+       <h3>EEOC v. United Parcel Service (2008)</h3>
+       <p>UPS settled after the EEOC brought claims that the company failed to engage in the interactive process for an employee with ADHD and denied reasonable accommodations, including written instructions and a modified schedule.</p>
+ 
+       <h2>How to request ADA accommodations</h2>
+       <ol><li>Obtain documentation from your healthcare provider</li><li>Identify accommodations that would help</li><li>Submit written request to HR</li><li>Participate in the interactive process</li><li>If denied, file with the EEOC</li></ol>
+ 
+       <h2>Limitations of ADA protection</h2>
+       <p>The ADA does not cover all situations:</p>
+       <ul><li>Employers with fewer than 15 employees (state laws may apply)</li><li>Accommodation would cause undue hardship</li><li>Cannot perform essential job functions even with accommodations</li><li>Employee poses a direct threat to health or safety</li></ul>
+     </div></div></div></section>
+   <section class="section-band-alt border-t border-zinc-200"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8"><p class="text-xs text-zinc-400 leading-relaxed max-w-3xl"><strong class="text-zinc-500">Disclaimer:</strong> This page provides general information, not legal advice. Consult with an employment attorney for guidance specific to your situation.</p></div></section>
+ </BaseLayout>

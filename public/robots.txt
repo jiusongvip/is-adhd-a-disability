@@ -1,0 +1,5 @@
+ User-agent: *
+ Allow: /
+ 
+ Sitemap: https://isadhdadisability.com/sitemap.xml
+ Sitemap: https://isadhdadisability.com/sitemap-index.xml

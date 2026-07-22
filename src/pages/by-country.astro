@@ -1,0 +1,24 @@
+ ---
+ import BaseLayout from "../layouts/BaseLayout.astro";
+import { siteConfig } from "../data/site";
+ const pageSchema = { "@context": "https://schema.org", "@type": "Article", "headline": "Is ADHD a Disability by Country?", "description": "How ADHD disability status and legal protections vary across countries.", "datePublished": "2026-07-22", "publisher": siteConfig.publisher, "mainEntityOfPage": { "@type": "WebPage", "@id": "https://isadhdadisability.com/by-country" } };
+ const countries = [
+   { name: "United States", laws: "ADA, Section 504, IDEA, Fair Housing Act", status: "Yes -- ADHD is recognized as a disability under multiple federal laws when it substantially limits major life activities.", notes: "SSDI/SSI benefits possible but difficult. Workplace and education accommodations available. Most comprehensive protections globally." },
+   { name: "United Kingdom", laws: "Equality Act 2010", status: "Yes -- ADHD can qualify as a disability if it has a substantial and long-term adverse effect on daily activities.", notes: "Employers must make reasonable adjustments. Access to Work scheme provides funding for workplace support. PIP (Personal Independence Payment) available." },
+   { name: "Canada", laws: "Canadian Human Rights Act, Provincial Codes", status: "Yes -- ADHD is recognized as a disability under federal and provincial human rights legislation.", notes: "Duty to accommodate applies across employment, education, and services. CPP Disability benefits may be available in some cases." },
+   { name: "Australia", laws: "Disability Discrimination Act 1992", status: "Yes -- ADHD is covered under disability discrimination law.", notes: "NDIS (National Disability Insurance Scheme) access possible with proper documentation. Workplace and education accommodations available." },
+   { name: "European Union", laws: "EU Employment Equality Directive, UN CRPD", status: "Varies by country, but generally yes under EU directives.", notes: "Most EU countries recognize ADHD as a disability for employment nondiscrimination. Individual country implementations differ significantly." },
+   { name: "Ireland", laws: "Employment Equality Acts, Equal Status Acts", status: "Yes -- ADHD is recognized as a disability under Irish equality legislation.", notes: "Reasonable accommodation requirement applies in employment and education." },
+   { name: "New Zealand", laws: "Human Rights Act 1993, Health and Disability Commissioner Act", status: "Yes -- ADHD is covered under disability discrimination protections.", notes: "Reasonable accommodation obligations in employment and education." }
+ ];
+ ---
+ <BaseLayout title="Is ADHD a Disability? by Country: US, UK, Canada and More" description="How ADHD disability status and legal protections vary across countries. Compare the US, UK, Canada, Australia, EU, and others. Find out your rights." canonicalURL="https://isadhdadisability.com/by-country" schema={pageSchema}>
+   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 md:pt-20 md:pb-16">
+     <nav class="text-sm text-zinc-400 mb-6"><a href="/" class="hover:text-accent">Home</a> / By Country</nav>
+     <div class="max-w-3xl"><p class="text-sm font-medium text-accent mb-4">International Comparison</p><h1 class="text-3xl md:text-5xl font-bold text-zinc-900 leading-tight tracking-tight">Is ADHD a Disability in Your Country?</h1><p class="mt-6 text-lg text-zinc-600 leading-relaxed max-w-2xl">ADHD disability status varies by country. Here is how major English-speaking countries and the European Union classify ADHD under their disability laws.</p></div>
+   </section>
+   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-24"><div class="space-y-8 max-w-3xl">
+     {countries.map((c) => (<div class="border border-zinc-200 rounded-lg p-6"><h2 class="text-lg font-semibold text-zinc-900 mb-1">{c.name}</h2><h3 class="text-xs font-medium text-zinc-400 mb-3">{c.laws}</h3><p class="text-sm text-accent font-medium mb-2">{c.status}</p><p class="text-sm text-zinc-500 leading-relaxed">{c.notes}</p></div>))}
+   </div></section>
+   <section class="border-t border-zinc-200"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8"><p class="text-xs text-zinc-400 leading-relaxed max-w-3xl"><strong class="text-zinc-500">Disclaimer:</strong> This comparison is a general overview. Laws change and interpretations vary. Consult a local disability advocate or attorney for current guidance in your jurisdiction.</p></div></section>
+ </BaseLayout>

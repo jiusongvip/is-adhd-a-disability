@@ -1,0 +1,35 @@
+ ---
+ import BaseLayout from "../layouts/BaseLayout.astro";
+import { siteConfig } from "../data/site";
+  const pageSchema = { "@context": "https://schema.org", "@type": "Article", "headline": "ADHD and Section 504: A Complete Guide", "description": "How Section 504 protects students with ADHD. Covers eligibility, plan development, and accommodations.", "datePublished": "2026-07-22", "publisher": siteConfig.publisher, "mainEntityOfPage": { "@type": "WebPage", "@id": "https://isadhdadisability.com/section-504" } };
+ ---
+ <BaseLayout title="ADHD and Section 504: A Complete Guide" description="How Section 504 protects students with ADHD. Covers eligibility, 504 Plan development, vs IDEA comparison, accommodations, and parent rights." canonicalURL="https://isadhdadisability.com/section-504" schema={pageSchema}>
+   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 md:pt-20 md:pb-16">
+     <nav class="text-sm text-zinc-400 mb-6"><a href="/" class="hover:text-accent">Home</a> / Section 504</nav>
+     <div class="max-w-3xl"><p class="text-sm font-medium text-accent mb-4">Rehabilitation Act of 1973</p><h1 class="text-3xl md:text-5xl font-bold text-zinc-900 leading-tight tracking-tight">ADHD and Section 504</h1><p class="mt-6 text-lg text-zinc-600 leading-relaxed max-w-2xl">Section 504 is the most common pathway for students with ADHD to receive school accommodations. Here is how it works, who qualifies, and what to expect from the process.</p></div>
+   </section>
+   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-24"><div class="max-w-3xl prose">
+     <h2>What is Section 504?</h2>
+     <h3>Schools covered under Section 504</h3>
+     <p><a href="https://www2.ed.gov/about/offices/list/ocr/504faq.html" target="_blank" rel="noopener noreferrer">Section 504 of the Rehabilitation Act of 1973</a> is a federal civil rights law that prohibits discrimination based on disability in any program or activity receiving federal financial assistance -- which includes <strong>all public schools and most private schools and colleges</strong> in the US.</p>
+     <p>Unlike IDEA, Section 504 has a broader definition of disability and covers students who may not need special education but still require accommodations to access their education equally.</p>
+     <h2>How ADHD qualifies under Section 504</h2>
+     <p>ADHD typically meets Section 504's definition of disability because it is:</p>
+     <ul><li>A <strong>mental impairment</strong> recognized by the medical community</li><li>That <strong>substantially limits</strong> the major life activity of learning, concentrating, or thinking</li></ul>
+     <p>Importantly, Section 504 considers the student <strong>without mitigation measures</strong> -- so even if medication helps, the student may still qualify.</p>
+     <h2>The 504 Plan process</h2>
+     <h3>Step-by-step evaluation timeline</h3>
+     <ol><li><strong>Referral:</strong> A parent, teacher, or other school staff member requests a 504 evaluation</li><li><strong>Evaluation:</strong> The school gathers information from multiple sources (medical records, teacher reports, parent input, grades, observations)</li><li><strong>Eligibility determination:</strong> A team determines whether the student has a qualifying disability that substantially limits a major life activity</li><li><strong>Plan development:</strong> If eligible, the team develops a written 504 Plan specifying accommodations and services</li><li><strong>Implementation and review:</strong> The plan is shared with all relevant teachers and reviewed annually</li></ol>
+     <h2>Section 504 vs. IDEA at a glance</h2>
+     <h3>Key differences families should know</h3>
+     <table class="not-prose w-full text-sm my-8"><thead><tr class="border-b border-zinc-300"><th class="py-2 pr-4 text-left font-semibold text-zinc-900">Feature</th><th class="py-2 pr-4 text-left font-semibold text-zinc-900">Section 504</th><th class="py-2 text-left font-semibold text-zinc-900">IDEA</th></tr></thead>
+       <tbody class="text-zinc-600"><tr class="border-b border-zinc-200"><td class="py-2 pr-4 font-medium text-zinc-900">Who qualifies</td><td class="py-2 pr-4">Broader definition -- any disability that limits a major life activity</td><td class="py-2">Must need special education due to one of 13 specific disability categories</td></tr>
+       <tr class="border-b border-zinc-200"><td class="py-2 pr-4 font-medium text-zinc-900">Document created</td><td class="py-2 pr-4">504 Plan</td><td class="py-2">Individualized Education Program (IEP)</td></tr>
+       <tr class="border-b border-zinc-200"><td class="py-2 pr-4 font-medium text-zinc-900">What it provides</td><td class="py-2 pr-4">Accommodations and services for equal access</td><td class="py-2">Specialized instruction, goals, services, accommodations</td></tr>
+       <tr><td class="py-2 pr-4 font-medium text-zinc-900">Funding</td><td class="py-2 pr-4">No federal funding attached</td><td class="py-2">Some federal funding to states</td></tr></tbody></table>
+     <h2>Parent rights under Section 504</h2>
+     <h3>Filing a complaint with the OCR</h3>
+     <ul><li>Right to <strong>receive notice</strong> before the school evaluates or changes your child's placement</li><li>Right to <strong>examine relevant records</strong></li><li>Right to an <strong>impartial hearing</strong> if you disagree with school decisions</li><li>Right to <strong>file a complaint</strong> with the Office for Civil Rights (OCR)</li></ul>
+   </div></section>
+   <section class="border-t border-zinc-200"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8"><p class="text-xs text-zinc-400 leading-relaxed max-w-3xl"><strong class="text-zinc-500">Disclaimer:</strong> General information, not legal advice. Section 504 procedures vary by school district.</p></div></section>
+ </BaseLayout>

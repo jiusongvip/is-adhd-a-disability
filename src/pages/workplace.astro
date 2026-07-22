@@ -1,0 +1,33 @@
+ ---
+ import BaseLayout from "../layouts/BaseLayout.astro";
+import { siteConfig } from "../data/site";
+ const pageSchema = { "@context": "https://schema.org", "@type": "Article", "headline": "Is ADHD a Disability at Work?", "description": "Understand ADHD disability status in the workplace.", "datePublished": "2026-07-22", "publisher": siteConfig.publisher, "mainEntityOfPage": { "@type": "WebPage", "@id": "https://isadhdadisability.com/workplace" } };
+ ---
+  <BaseLayout title="Is ADHD a Disability at Work? Rights and Accommodations" description="Understand ADHD disability status at work. Covers reasonable accommodations, disclosure decisions, your legal rights under the ADA, and how to file a claim." canonicalURL="https://isadhdadisability.com/workplace" schema={pageSchema}>
+   <section class="hero-surface border-b border-emerald-100">
+     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12 md:pt-24 md:pb-18">
+       <nav class="text-sm text-zinc-400 mb-6"><a href="/" class="hover:text-accent">Home</a> / Workplace</nav>
+       <div class="max-w-3xl"><p class="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-dark mb-5 bg-accent-light px-3 py-1 rounded-full"><span class="w-1.5 h-1.5 rounded-full bg-accent"></span>Employment Rights</p><h1 class="text-3xl md:text-5xl font-extrabold text-zinc-900 leading-none tracking-tight">Is ADHD a Disability at Work?</h1><p class="mt-6 text-lg text-zinc-600 leading-relaxed max-w-2xl">Yes. ADHD is recognized as a disability in the workplace under the ADA, giving you the right to reasonable accommodations and protection from discrimination.</p></div>
+     </div>
+   </section>
+   <section class="section-band"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20"><div class="max-w-3xl">
+     <div class="callout-accent p-6 rounded-xl mb-10 not-prose">
+       <p class="font-bold text-zinc-900 text-base mb-3">Key takeaways</p>
+       <ul class="text-sm text-zinc-600 space-y-1.5 leading-relaxed">
+         <li>The ADA protects workers with ADHD from discrimination and guarantees reasonable accommodations</li>
+         <li>You are not required to disclose ADHD, but must do so to receive accommodations</li>
+         <li>Do not disclose during hiring -- wait until you need specific accommodations</li>
+         <li>If denied, you have 180 days to file with the EEOC</li>
+       </ul>
+     </div>
+   <div class="prose">
+     <h2>Your rights under the ADA at work</h2><ul><li><strong>Reasonable accommodations</strong> to perform essential job functions</li><li><strong>Freedom from discrimination</strong> in all employment terms</li><li><strong>Confidentiality</strong> of disability information</li><li><strong>Protection from retaliation</strong> for requesting accommodations</li></ul>
+     <h2>The disclosure decision</h2><p>One of the hardest decisions for people with ADHD is whether to disclose at work.</p>
+     <h3>Reasons to disclose</h3><ul><li>You need specific accommodations</li><li>Performance issues might be misinterpreted</li><li>Build trust with your manager</li><li>Reduce stigma around neurodivergence</li></ul>
+     <h3>Reasons to be cautious</h3><ul><li>Stigma and misconceptions persist</li><li>May affect how you are perceived</li><li>Illegal discrimination is hard to prove</li><li>You may not know what accommodations help</li></ul>
+     <div class="callout-accent p-6 my-8 not-prose"><p class="font-bold text-zinc-900 text-lg mb-2">A practical approach</p><p class="text-sm text-zinc-600 leading-relaxed">Do not disclose during hiring. If performance issues arise or specific accommodations are needed after you have established yourself, make a formal request through HR with medical documentation. You are not required to tell your manager your diagnosis -- only that you have a qualifying disability.</p></div>
+     <h2>Common workplace accommodations</h2><ul><li><strong>Flexible schedule</strong> or remote work</li><li><strong>Quiet workspace</strong> or noise-canceling headphones</li><li><strong>Written instructions</strong> and structured task management</li><li><strong>Frequent check-ins</strong> with supervisor</li><li><strong>Minimized distractions</strong> (focus apps, email blocks)</li><li><strong>Assistive technology</strong> (speech-to-text, time management apps)</li></ul>
+     <h2>What to do if your request is denied</h2><ol><li><strong>Ask for the reason in writing</strong></li><li><strong>Propose alternatives</strong></li><li><strong>Document everything</strong></li><li><strong>File with the <a href="https://www.eeoc.gov/filing-charge-discrimination" target="_blank" rel="noopener noreferrer">EEOC</a></strong> (180-day deadline)</li><li><strong>Consult an employment attorney</strong></li></ol>
+   </div></div></div></section>
+   <section class="section-band-alt border-t border-zinc-200"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8"><p class="text-xs text-zinc-400 leading-relaxed max-w-3xl"><strong class="text-zinc-500">Disclaimer:</strong> This page provides general information, not legal advice.</p></div></section>
+ </BaseLayout>

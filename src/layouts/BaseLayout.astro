@@ -1,0 +1,128 @@
+ ---
+ import "../styles/global.css";
+ export interface Props {
+   title: string;
+   description: string;
+   ogImage?: string;
+   canonicalURL?: string;
+   schema?: object;
+ }
+ const { title, description, ogImage = "", canonicalURL = "", schema } = Astro.props;
+ const siteName = "Is ADHD a Disability?";
+ const pageTitle = `${title} | ${siteName}`;
+ const siteURL = "https://isadhdadisability.com";
+ const defaultOGImage = `${siteURL}/og-image.png`;
+ const ogImg = ogImage || defaultOGImage;
+ const breadcrumbSchema = canonicalURL && canonicalURL !== siteURL ? {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     { "@type": "ListItem", "position": 1, "name": "Home", "item": siteURL },
+     { "@type": "ListItem", "position": 2, "name": title, "item": canonicalURL }
+   ]
+ } : null;
+ ---
+ <!doctype html>
+ <html lang="en">
+   <head>
+     <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>{pageTitle}</title>
+     <meta name="description" content={description} />
+     <link rel="preconnect" href="https://fonts.googleapis.com" />
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+     <meta property="og:image" content={ogImg} />
+     <meta property="og:title" content={pageTitle} />
+     <meta property="og:description" content={description} />
+     <meta property="og:type" content="website" />
+     <meta property="og:url" content={canonicalURL || siteURL} />
+     <meta property="og:site_name" content={siteName} />
+     <meta property="og:locale" content="en_US" />
+     <meta name="twitter:card" content="summary_large_image" />
+     <meta name="twitter:title" content={pageTitle} />
+     <meta name="twitter:description" content={description} />
+     <meta name="twitter:image" content={ogImg} />
+     {canonicalURL && <link rel="canonical" href={canonicalURL} />}
+     {schema && <script type="application/ld+json" set:html={JSON.stringify(schema, null, 2)} />}
+     {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema, null, 2)} />}
+   </head>
+  <body class="min-h-screen flex flex-col">
+   <script>
+     (function() {
+       var p = window.location.pathname;
+       if (p !== '/' && p.endsWith('/')) {
+         window.location.replace(p.slice(0, -1) + window.location.search + window.location.hash);
+       }
+     })();
+   </script>
+     <a href="#main-content" class="skip-link">Skip to content</a>
+     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-emerald-100">
+       <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between" aria-label="Main navigation">
+         <a href="/" class="text-lg font-bold text-zinc-900 hover:text-accent transition-colors flex items-center gap-2">
+           <span class="w-2 h-2 rounded-full bg-accent inline-block"></span>
+           Is ADHD a Disability?
+         </a>
+         <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+           <a href="/ada" class="text-zinc-600 hover:text-accent transition-colors">ADA</a>
+           <a href="/school" class="text-zinc-600 hover:text-accent transition-colors">School</a>
+           <a href="/workplace" class="text-zinc-600 hover:text-accent transition-colors">Workplace</a>
+           <a href="/ssdi" class="text-zinc-600 hover:text-accent transition-colors">SSDI</a>
+           <a href="/faq" class="text-zinc-600 hover:text-accent transition-colors">FAQ</a>
+           <a href="/blog" class="text-zinc-600 hover:text-accent transition-colors">Blog</a>
+         </div>
+         <button class="md:hidden text-zinc-700" id="mobile-menu-btn" aria-label="Open menu">
+           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+         </button>
+       </nav>
+     </header>
+     <main id="main-content" class="flex-1">
+       <slot />
+     </main>
+     <footer class="bg-zinc-900 text-zinc-400 mt-16">
+       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+         <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+           <div>
+             <p class="font-bold text-white text-lg mb-3 flex items-center gap-2">
+               <span class="w-2 h-2 rounded-full bg-accent inline-block"></span>
+               Is ADHD a Disability?
+             </p>
+             <p class="text-sm leading-relaxed text-zinc-400">A clear, practical guide to ADHD disability status under US law. Information only -- not legal advice.</p>
+           </div>
+           <div>
+             <p class="font-semibold text-zinc-300 mb-4 text-sm">Main Topics</p>
+             <ul class="space-y-2.5 text-sm">
+               <li><a href="/ada" class="text-zinc-400 hover:text-accent-border transition-colors">ADA and ADHD</a></li>
+               <li><a href="/school" class="text-zinc-400 hover:text-accent-border transition-colors">School Rights</a></li>
+               <li><a href="/workplace" class="text-zinc-400 hover:text-accent-border transition-colors">Workplace</a></li>
+               <li><a href="/ssdi" class="text-zinc-400 hover:text-accent-border transition-colors">SSDI Benefits</a></li>
+             </ul>
+           </div>
+           <div>
+             <p class="font-semibold text-zinc-300 mb-4 text-sm">Resources</p>
+             <ul class="space-y-2.5 text-sm">
+               <li><a href="/faq" class="text-zinc-400 hover:text-accent-border transition-colors">FAQ</a></li>
+               <li><a href="/rights" class="text-zinc-400 hover:text-accent-border transition-colors">Rights Checklist</a></li>
+               <li><a href="/accommodations" class="text-zinc-400 hover:text-accent-border transition-colors">Accommodations</a></li>
+               <li><a href="/by-country" class="text-zinc-400 hover:text-accent-border transition-colors">By Country</a></li>
+             </ul>
+           </div>
+           <div>
+             <p class="font-semibold text-zinc-300 mb-4 text-sm">Site</p>
+             <ul class="space-y-2.5 text-sm">
+               <li><a href="/about" class="text-zinc-400 hover:text-accent-border transition-colors">About Us</a></li>
+               <li><a href="/contact" class="text-zinc-400 hover:text-accent-border transition-colors">Contact</a></li>
+               <li><a href="/section-504" class="text-zinc-400 hover:text-accent-border transition-colors">Section 504</a></li>
+               <li><a href="/blog" class="text-zinc-400 hover:text-accent-border transition-colors">Blog</a></li>
+             </ul>
+           </div>
+         </div>
+         <div class="border-t border-zinc-800 mt-10 pt-8 flex flex-col sm:flex-row justify-between gap-3 text-xs text-zinc-500">
+           <p>This site provides general information, not legal advice. Consult a qualified attorney for your specific situation.</p>
+           <p>&copy; {new Date().getFullYear()} Is ADHD a Disability Guide</p>
+         </div>
+       </div>
+     </footer>
+   </body>
+ </html>
