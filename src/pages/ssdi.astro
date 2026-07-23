@@ -3,14 +3,17 @@
 import { siteConfig } from "../data/site";
  const pageSchema = { "@context": "https://schema.org", "@type": "Article", "headline": "Can You Get Disability for ADHD? SSDI and SSI Guide", "description": "Complete guide to SSDI and SSI for ADHD.", "datePublished": "2026-07-22", "publisher": siteConfig.publisher, "mainEntityOfPage": { "@type": "WebPage", "@id": "https://isadhdadisability.com/ssdi" } };
  ---
- <BaseLayout title="Can You Get Disability for ADHD? SSDI and SSI Guide" description="Complete guide to SSDI and SSI for ADHD. Understand eligibility, documentation requirements, approval odds, and how to strengthen your claim." canonicalURL="https://isadhdadisability.com/ssdi" schema={pageSchema}>
+ <BaseLayout title="Can You Get Disability for ADHD? SSDI and SSI Guide" description="Complete guide to SSDI and SSI for ADHD. Understand eligibility, documentation requirements, approval odds, and how to strengthen your claim." canonicalURL="https://isadhdadisability.com/ssdi" ogImage="/images/ssdi.webp" schema={pageSchema}>
    <section class="hero-surface border-b border-emerald-100">
      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12 md:pt-24 md:pb-18">
        <nav class="text-sm text-zinc-400 mb-6"><a href="/" class="hover:text-accent">Home</a> / SSDI and SSI Benefits</nav>
-       <div class="max-w-3xl">
+       <div class="flex flex-col md:flex-row gap-8 items-start">
+         <div class="max-w-3xl flex-1">
          <p class="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-dark mb-5 bg-accent-light px-3 py-1 rounded-full"><span class="w-1.5 h-1.5 rounded-full bg-accent"></span>Disability Benefits</p>
          <h1 class="text-3xl md:text-5xl font-extrabold text-zinc-900 leading-none tracking-tight">Can You Get Disability Benefits for ADHD?</h1>
          <p class="mt-6 text-lg text-zinc-600 leading-relaxed max-w-2xl">Yes, it is possible to receive SSDI or SSI benefits for ADHD, but the bar is high. The Social Security Administration requires strong evidence that ADHD severely limits your ability to work. Here is what you need to know.</p>
+       </div>
+       <div class="hidden md:block w-80 flex-shrink-0"><img src="/images/ssdi.webp" alt="Government documents and forms for disability benefits application" class="rounded-xl shadow-lg w-full" width="320" height="213" loading="eager" /></div>
        </div>
      </div>
    </section>
