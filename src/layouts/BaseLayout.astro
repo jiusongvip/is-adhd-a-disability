@@ -6,10 +6,11 @@
    ogImage?: string;
    canonicalURL?: string;
    schema?: object;
+   titleOnly?: boolean;
  }
- const { title, description, ogImage = "", canonicalURL = "", schema } = Astro.props;
+ const { title, description, ogImage = "", canonicalURL = "", schema, titleOnly = false } = Astro.props;
  const siteName = "Is ADHD a Disability?";
- const pageTitle = `${title} | ${siteName}`;
+ const pageTitle = title;
  const siteURL = "https://isadhdadisability.com";
  const defaultOGImage = `${siteURL}/images/og-image.png`;
  const ogImg = ogImage || defaultOGImage;
